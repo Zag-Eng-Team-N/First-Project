@@ -1,5 +1,5 @@
 # Members Name
-## Shahd Waleed (leader)
+## Shahd Waleed 
 - create organization
 - create leniar
 
