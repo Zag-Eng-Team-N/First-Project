@@ -71,7 +71,7 @@ aside {
 }
 
 .btn-subscribe:hover {
-  background-color: var(--accent-color);
+  opacity: 80%;
 }
  
 .aside-section p {
@@ -189,4 +189,60 @@ aside {
 .more p {
   color: var(--accent-color);
   font-size: var(--font-normal);
+}
+
+.names {
+  font-size: var(--font-normal);
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.names:hover {
+  text-decoration: underline;
+}
+
+.user-name {
+  font-size: var(--font-normal);
+  color: var(--text-secondary-color);
+}
+
+.tofollow {
+  cursor: pointer;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  transition: 0.3s;
+  align-items: center;
+}
+
+.tofollow:hover {
+  background-color: var(--border-color);
+}
+
+.tofollow img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+
+.user-info {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.tofollow button {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  font-size: var(--font-normal);
+  font-weight: bold;
+  border-style: none;
+  border-radius: 16px;
+  padding: 4px 10px;
+  transition: 0.3s;
+  height: 32px;
+}
+
+.tofollow button:hover {
+  opacity: 80%;
 }
