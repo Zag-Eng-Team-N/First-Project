@@ -1,22 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Home</title>
   <link rel="icon" href="../Resources/Images/X (1).png">
   <link rel="stylesheet" href="../CSS/style.css">
+
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=search" />
+  <style>
+    .material-symbols-outlined {
+         font-variation-settings:
+         'FILL' 0,
+         'wght' 300,
+         'GRAD' 0,
+         'opsz' 24
+    }
+</style>
+
 </head>
+
 <body>
   <header>header</header>
   <main>
-  <section>center</section>
+  <section class="center">center</section>
   <aside>
 
-    <div class="search">
-      <input>
-      </input>
-    </div>
+    <section class="search-section">
+      <div class="search">
+        <span class="material-symbols-outlined">search</span>
+        <input type="text" placeholder="Search">
+      </div>
+    </section>
 
     <section class="aside-section">
       <div class="aside-label">
@@ -136,6 +152,18 @@
       </div>
     </section>
 
+    <footer>
+      <div>
+        <span>Terms of Service</span>  | 
+        <span>Privacy Policy</span>  | 
+        <span>Cookie Policy</span>  | 
+        <span>Accessibility</span>  | 
+        <span>Ads info</span>  | 
+        <span>More</span> <span id="footer-more">...</span> 
+        &copy; 2026 X Corp.
+      </div>
+    </footer>
+  
   </aside>
   </main>
 </body>
