@@ -23,7 +23,7 @@ aside {
   visibility: visible;
 }
 
-.premium {
+.aside-section {
   border: 1px solid var(--border-color);
   border-radius: 16px;
   display: flex;
@@ -31,18 +31,19 @@ aside {
   gap: 10px;
   align-items: flex-start;
   padding: 16px;
-  max-width: 600px;
+  max-width: 300px;
 }
 
-.premium-label {
+.aside-label {
   display: flex;
   align-items: center;
   padding: 0px;
-  gap: 8px;
   margin: 0px;
+  justify-content: space-between;
+  width: 100%;
 }
 
-#pre-label {
+#side-label {
   font-size: var(--font-large);
   font-weight: bold;
   margin: 0px;
@@ -67,8 +68,56 @@ aside {
   border-radius: 25px;
 }
  
-.premium p {
+.aside-section p {
   margin: 0px;
   font-size: var(--font-normal);
+}
+
+.news {
+  padding: 8px;
+}
+
+.news:hover {
+  background-color: var(--border-color);
+}
+
+.news-label {
+  font-size: var(--font-normal);
+  font-weight: bold;
+}
+
+.trending-news p {
+  font-size: var(--font-small);
+  color: var(--text-secondary-color);
+}
+
+.trending-news {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.close-btn {
+  font-size: var(--font-large);
+  cursor: pointer;
+  border-radius: 50%;
+  padding: 5px 10px;
+}
+
+.close-btn:hover {
+  background-color: var(--border-color);
+}
+
+.users {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.users img {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  border: 2px solid var(--white-color);
+  margin-left: -8px;
 }
 
