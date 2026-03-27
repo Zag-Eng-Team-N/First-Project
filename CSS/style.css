@@ -307,3 +307,123 @@ footer div {
 footer span:hover {
   text-decoration: underline;
 }
+
+   
+  body{
+    display: flex;
+   justify-content: center;
+    background-color: black;
+  }
+ :root{
+   --color-main:rgb(77, 75, 75);
+ }
+
+
+section{
+    width: 40%;
+    color: white;
+  padding: 5px;
+    border: 2px,solid,var(--color-main);
+}
+#userphoto{
+ width: 35px;
+height: 35px;
+ border-radius: 50%;
+ object-fit: cover;
+}
+ .informUser{
+    display: flex;
+    gap:5px;
+ }
+ #name{
+      font-family: 'Roboto', sans-serif;
+  font-weight: 500; 
+ }
+ #username{
+color:var(--color-main);
+ }
+ #more{
+    margin:auto ;
+ }
+ button{
+   border: none;
+  background: none;
+ }
+ i{
+  color:var(--color-main);
+ }
+ span{
+  color:var(--color-main);
+ }
+ .interac{
+   display: flex;
+   gap: 70px;
+    margin-left: 35px;
+    
+ }
+ .load{
+   margin-left: 10px;
+ }
+ .mypost p{
+  
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300; 
+  margin-left: 35px;
+ }
+ #postPhoto{
+    margin-left: 35px;
+    border-radius: 10px;
+    width: 80%;
+ }
+.blue :hover i,
+.blue:hover span,
+.blue:hover i{
+color: rgb(51, 51, 205);
+ }
+.red:hover i,
+.red:hover span{
+  color: red;
+ }
+ .green:hover i,
+ .green:hover span{
+  color: green;
+ }
+  #more,#icon7{
+    position: relative;
+  }
+    
+.men,.men2{
+position: absolute;
+background-color: black;
+border: 1px solid rgb(70,70,70);
+
+border-radius: 10px;
+box-shadow: 0px 0 10px rgba(255,255,255,0.1);
+color: white;
+ 
+}
+.men{
+padding: 5px 20px 5px 0px;
+width: 120px;
+ top: 100%;
+right: 0px;
+}
+ .share-item{
+padding: 10px 30px 10px 3px;
+}
+.men2{
+  width: 200px;
+  height: 325px;
+ padding:5px 2px 5px 0px ;
+  top: 100%;
+right: 0px;
+}
+ .share-item2{
+  padding:15px 25px 5px 0px ;
+ white-space: nowrap;
+
+ }
+
+button{
+ cursor: pointer;
+}
