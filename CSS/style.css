@@ -6,6 +6,7 @@
   --text-primary-color : #E7E9EA; 
   --text-secondary-color : #71767B;
   --border-color: #e4eaec;  /*#2F3336;*/
+  --color-main:rgb(77, 75, 75);
   /*Fonts*/
   --font-small: 13px;
   --font-normal: 15px;
@@ -17,32 +18,44 @@ body {
   font-family: "Twitter Chirp", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   background-color: var(--white-color);
   color: var(--primary-color);
-  display: flex;
+  margin: 0;
+  display: grid;
+  grid-template-columns: 170px 580px 450px;
+  gap: 20px;
+  justify-content: center;
+  height: 100vh;
+  overflow-y: auto;   /* Scroll */
 }
 
 header {
-  flex-grow: 1;
+  border-right: 1px solid var(--border-color);
+  overflow-y: auto;
+  /*padding: 20px;*/
 }
+
+/*main {
+  /*display: grid;
+  grid-template-columns: 250px 600px 350px; /* header | center | aside 
+  gap: 20px;
+  justify-content: center; /* يحافظ على التمركز لو الشاشة كبيرة 
+  height: 100vh;
+}*/
 
 main {
-  display: flex;
-  flex-grow: 5;
-}
-
-.center {
-  flex-grow: 7;
+  border-right: 1px solid var(--border-color);
+  min-width: 0; /* يمنع البوست من كسر layout */
   border: 1px solid var(--border-color);
 }
 
 aside {
-  flex-grow: 1;
+  padding-left: 20px;
+  /*overflow-y: auto;*/ 
   visibility: visible;
   padding-left: 30px;
   gap: 20px;
   display: flex;
   flex-direction: column;
   padding-bottom: 100px;
-
 }
 
 .search-section {
@@ -308,123 +321,130 @@ footer span:hover {
   text-decoration: underline;
 }
 
-   
-  body{
-    display: flex;
-   justify-content: center;
-    background-color: black;
-  }
- :root{
-   --color-main:rgb(77, 75, 75);
- }
 
-
-section{
-    width: 40%;
-    color: white;
-  padding: 5px;
-    border: 2px,solid,var(--color-main);
-   
+.post{
+  padding: 15px;
+  border-bottom: 1px solid var(--border-color);
 }
+
+
 #userphoto{
- width: 35px;
-height: 35px;
- border-radius: 50%;
- object-fit: cover;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  object-fit: cover;
 }
- .informUser{
-    display: flex;
-    gap:5px;
- }
- #name{
-      font-family: 'Roboto', sans-serif;
-  font-weight: 500; 
- }
- #username{
-color:var(--color-main);
- }
- #more{
-    margin:auto ;
- }
- button{
+
+.informUser{
+  display: flex;
+  gap:5px;
+  align-items: center;
+  width: 100%;
+}
+ 
+#name{
+  font-size: var(--font-normal);
+  font-weight: bold;
+}
+
+#username{
+  color:var(--text-secondary-color);
+  font-size: var(--font-normal);
+}
+
+#more{
+  margin-left:auto;
+}
+
+.post button{
    border: none;
-  background: none;
- }
- i{
+   background: none;
+}
+
+i{
   color:var(--color-main);
- }
- span{
+}
+
+span{
   color:var(--color-main);
- }
- .interac{
+}
+
+.interac{
    display: flex;
-   gap: 70px;
-    margin-left: 35px;
-    
- }
- .load{
-   margin-left: 10px;
- }
- .mypost p{
-  
+   justify-content: space-between;
+   margin-left: 0;
+    align-items: center;
+  flex-wrap: wrap; 
+  width: 100%;
+}
+
+.load{
+   padding-left: 10px;
+}
+
+.mypost p{
   font-family: 'Roboto', sans-serif;
   font-weight: 300; 
-  margin-left: 35px;
- }
- #postPhoto{
-    margin-left: 35px;
-    border-radius: 10px;
-    width: 80%;
- }
-.blue :hover i,
-.blue:hover span,
-.blue:hover i{
-color: rgb(51, 51, 205);
- }
-.red:hover i,
-.red:hover span{
-  color: red;
- }
- .green:hover i,
- .green:hover span{
-  color: green;
- }
-  #more,#icon7{
-    position: relative;
-  }
-    
-.men,.men2{
-position: absolute;
-background-color: black;
-border: 1px solid rgb(70,70,70);
+ margin-left: 35px;
+}
 
-border-radius: 10px;
-box-shadow: 0px 0 10px rgba(255,255,255,0.1);
-color: white;
+#postPhoto{
+ margin-left: 35px;
+  border-radius: 10px;
+  width: 80%;
  
 }
+
+.blue:hover i, .blue:hover span {
+  color: rgb(51, 51, 205);
+}
+
+.red:hover i, .red:hover span{
+  color: red;
+}
+
+.green:hover i, .green:hover span{
+  color: green;
+}
+
+#more,#icon7{
+  position: relative;
+}
+    
+.men,.men2{
+  position: absolute;
+  background-color: black;
+  border: 1px solid rgb(70,70,70);
+  border-radius: 10px;
+  box-shadow: 0px 0 10px rgba(255,255,255,0.1);
+  color: white;
+}
+
 .men{
-padding: 5px 20px 5px 0px;
-width: 120px;
- top: 100%;
-right: 0px;
+  padding: 5px 20px 5px 0px;
+  width: 120px;
+  top: 100%;
+  right: 0px;
 }
- .share-item{
-padding: 10px 30px 10px 3px;
+
+ 
+.share-item{
+  padding: 10px 30px 10px 3px;
 }
+
 .men2{
   width: 200px;
   height: 325px;
- padding:5px 2px 5px 0px ;
+  padding:5px 2px 5px 0px ;
   top: 100%;
-right: 0px;
+  right: 0px;
 }
- .share-item2{
-  padding:15px 25px 5px 0px ;
- white-space: nowrap;
 
- }
+.share-item2{
+  padding:15px 25px 5px 0px ;
+  white-space: nowrap;
+}
 
 button{
- cursor: pointer;
+  cursor: pointer;
 }
