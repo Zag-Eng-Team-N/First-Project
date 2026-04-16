@@ -11,8 +11,8 @@
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
    <!--link; font-->
    <link href="https://fonts.googleapis.com/css2?family=Lemonada:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=search" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=search" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=arrow_forward" />
   <style>
     .material-symbols-outlined {
          font-variation-settings:
@@ -28,7 +28,11 @@
 <body>
   <header>header</header>
   
-
+    <main>
+      <section class="two-optians">
+        <p> For You  </p> 
+        <p> Following </p>   
+      </section>
  
   <main>
       <section class="post">
@@ -37,8 +41,7 @@
           <img id="userphoto" src="../Resources/Images/profile.jpg" alt="">
           <div id="name">NadaEbrahim</div>
           <div id="username">@nadaebrahim</div>
-
-          <button class="blue"  id="more"> <i class="fa-solid fa-ellipsis"></i></button>
+          <button class="blue"  id="post-more"> <i class="fa-solid fa-ellipsis"></i></button>
         </div>
 
 
@@ -70,7 +73,58 @@
 
         </div>
 
-      </section>
+        </section>
+
+        <section>
+          <div class="feed-news">
+            <p id="side-label">Today’s News</p>
+            <span class="material-symbols-outlined">arrow_forward</span>
+          </div>
+          <!--  News  -->
+          <div class="feed-news feed-naws-flexing">
+            <p class="news-label">Viral Tiger Escape Video Divides Viewers on Real or AI</p>
+            <div class="trending-news">
+              <div class="users">
+                <img src="../Resources/Images/Avatar(3).png" alt="Avatars">
+                <img src="../Resources/Images/Avatar(2).png" alt="">
+                <img src="../Resources/Images/Avatar(1).jpeg" alt="">
+              </div>
+              <p>Trending now · Other · 258 posts</p>
+            </div>
+          </div>
+
+          <!--  News  -->
+          <div class="feed-news feed-naws-flexing">
+            <p class="news-label">Viral Tiger Escape Video Divides Viewers on Real or AI</p>
+            <div class="trending-news">
+              <div class="users">
+                <img src="../Resources/Images/Avatar(3).png" alt="Avatars">
+                <img src="../Resources/Images/Avatar(2).png" alt="">
+                <img src="../Resources/Images/Avatar(1).jpeg" alt="">
+              </div>
+              <p>Trending now · Other · 258 posts</p>
+            </div>
+          </div>
+
+          <!--  News  -->
+          <div class="feed-news feed-naws-flexing">
+            <p class="news-label">Viral Tiger Escape Video Divides Viewers on Real or AI</p>
+            <div class="trending-news">
+              <div class="users">
+                <img src="../Resources/Images/Avatar(3).png" alt="Avatars">
+                <img src="../Resources/Images/Avatar(2).png" alt="">
+                <img src="../Resources/Images/Avatar(1).jpeg" alt="">
+              </div>
+              <p>Trending now · Other · 258 posts</p>
+            </div>
+          </div>
+          
+          <div class="feed-news feed-naws-flexing">
+           <p id="more-blue">Show More</p>
+          </div>
+
+        </section>
+          
     </main>
 
 
@@ -79,7 +133,8 @@
 
     <section class="search-section">
       <div class="search">
-        <span class="material-symbols-outlined">search</span>
+        <img src="../Resources/Images/search_icon.svg">
+        <!-- <span class="material-symbols-outlined">search</span> -->
         <input type="text" placeholder="Search">
       </div>
     </section>
@@ -209,10 +264,13 @@
         <span>Cookie Policy</span>  | 
         <span>Accessibility</span>  | 
         <span>Ads info</span>  | 
-        <span>More</span> <span id="footer-more">...</span> 
+        <span id="footer-more">More</span> <span id="footer-more">...</span> 
         &copy; 2026 X Corp.
       </div>
     </footer>
+    
+    <a class="btn_chat_Grok">   <img id="btn-img" src="../Resources/Images/grok-ai-icon.svg" alt=""> </a>
+    <!--<button class="btn_chat_Grok">   <img id="btn-img" src="../Resources/Images/chat-icon.png" alt=""> </button> -->
   
   </aside>
 

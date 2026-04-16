@@ -3,6 +3,7 @@
   --primary-color : #000000; 
   --white-color :#fff ;
   --accent-color : #1D9BF0; /*links,buttons,follow*/
+  --accent-hover-color : #E8F5FD;
   --text-primary-color : #E7E9EA; 
   --text-secondary-color : #71767B;
   --border-color: #e4eaec;  /*#2F3336;*/
@@ -21,7 +22,6 @@ body {
   margin: 0;
   display: grid;
   grid-template-columns: 170px 580px 450px;
-  gap: 20px;
   justify-content: center;
   height: 100vh;
   overflow-y: auto;   /* Scroll */
@@ -44,18 +44,16 @@ header {
 main {
   border-right: 1px solid var(--border-color);
   min-width: 0; /* يمنع البوست من كسر layout */
-  border: 1px solid var(--border-color);
 }
 
 aside {
-  padding-left: 20px;
   /*overflow-y: auto;*/ 
   visibility: visible;
   padding-left: 30px;
   gap: 20px;
   display: flex;
   flex-direction: column;
-  padding-bottom: 100px;
+  padding-bottom: 150px;
 }
 
 .search-section {
@@ -63,7 +61,7 @@ aside {
   position: sticky;
   top: 0;
   z-index: 1000;
-  padding: 5px;
+  padding: 8px 0px;
 }
 
 .search {
@@ -73,7 +71,27 @@ aside {
   border: 1px solid var(--border-color);
   padding: 10px 15px;
   border-radius: 25px;
-  max-width: 300px;
+  max-width: 313px;
+}
+
+.search-focus {
+  border: 2px solid var(--accent-color);
+}
+
+.seach-box {
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.2);
+  position: absolute;
+  top: 56px;
+  background-color: var(--white-color);
+  padding: 10px 25px;
+  max-width: 270px;
+}
+
+.search-box-content {
+  font-size: var(--font-normal);
+  color: var(--text-secondary-color);
+  height: 100px;
 }
 
 .search input {
@@ -91,7 +109,7 @@ aside {
   gap: 10px;
   align-items: flex-start;
   padding: 16px;
-  max-width: 300px;
+  max-width: 313px;
 }
 
 .aside-label {
@@ -171,6 +189,7 @@ aside {
   border-radius: 50%;
   padding: 5px 10px;
   transition: 0.3s;
+  position: relative;
 }
 
 .close-btn:hover {
@@ -319,6 +338,8 @@ footer div {
  
 footer span:hover {
   text-decoration: underline;
+  cursor: pointer;
+  position: relative;
 }
 
 
@@ -326,7 +347,6 @@ footer span:hover {
   padding: 15px;
   border-bottom: 1px solid var(--border-color);
 }
-
 
 #userphoto{
   width: 35px;
@@ -352,8 +372,9 @@ footer span:hover {
   font-size: var(--font-normal);
 }
 
-#more{
+#post-more{
   margin-left:auto;
+  position: relative;
 }
 
 .post button{
@@ -448,3 +469,114 @@ span{
 button{
   cursor: pointer;
 }
+
+.menu_for_all {
+  border-radius: 10px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  width: 200px;
+  border: 1px solid var(--border-color);
+  overflow: hidden;
+}
+
+.menu_for_all_item {
+  background-color: var(--white-color);
+  font-size: var(--font-normal);
+  color: var(--primary-color);
+  font-weight: bold;
+  padding: 10px;
+}
+
+.menu_for_all_item:hover {
+  background-color: var(--border-color);
+  cursor: pointer;
+}
+
+.btn_chat_Grok {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: var(--white-color);
+  border-radius: 30%;
+  border: 1px solid var(--text-secondary-color);
+  box-shadow: 0 0 8px rgba(0,0,0,0.2);
+  width: 52px;
+  height: 52px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  padding: 5px;
+}
+
+.btn_chat_Grok:hover {
+  background-color: var(--accent-hover-color);
+}
+
+.btn-img {
+  width: 5px;
+  height: 5px;
+  position: relative;
+}
+
+/********************************/
+.feed-news {
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.feed-news:hover {
+  background-color: var(--border-color);
+}
+
+#more-blue {
+  color: var(--accent-color);
+}
+
+.feed-naws-flexing {
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 5px;
+}
+
+.feed-naws-flexing p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.two-optians {
+  display: flex;
+  border: 1px solid var(--accent-hover-color);
+}
+
+.two-optians p {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  margin: 0px;
+  flex-grow: 1;
+  text-align: center;
+  font-size: var(--font-normal);
+  font-weight:600;
+  color: var(--text-secondary-color);
+}
+
+.two-optians p:hover {
+  background-color: var(--border-color);
+}
+
+/*.two-optians-active {
+  color: var(--primary-color);
+}
+
+.two-optians-line {
+  position: absolute;
+  bottom: -2;
+  color: var(--accent-color);
+  border: 1px solid var(--accent-hover-color);
+} */
