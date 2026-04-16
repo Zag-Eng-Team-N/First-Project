@@ -346,7 +346,6 @@ footer span:hover {
 .post{
   padding: 15px;
   border-bottom: 1px solid var(--border-color);
-
 }
 
 #userphoto{
@@ -394,8 +393,10 @@ span{
 .interac{
    display: flex;
    justify-content: space-between;
-   margin-left: 35px;
-   
+   margin-left: 0;
+    align-items: center;
+  flex-wrap: wrap; 
+  width: 100%;
 }
 
 .load{
@@ -405,13 +406,14 @@ span{
 .mypost p{
   font-family: 'Roboto', sans-serif;
   font-weight: 300; 
-  margin-left: 35px;
+ margin-left: 35px;
 }
 
 #postPhoto{
-  margin-left: 35px;
+ margin-left: 35px;
   border-radius: 10px;
   width: 80%;
+ 
 }
 
 .blue:hover i, .blue:hover span {
