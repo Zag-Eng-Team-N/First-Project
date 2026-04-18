@@ -198,3 +198,6 @@ seacrhing.addEventListener("click",function(e){
   searchBar.appendChild(seachContent);
   
 });
+
+
+ 
