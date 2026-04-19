@@ -83,6 +83,7 @@ document.addEventListener("click", function(e) {
 //!btnmore.contains(e.target) &&
   if (
     !menu.contains(e.target) &&
+    !btnmore.contains(e.target) &&
     !closeBtn.contains(e.target) &&
     !footermoreBtn.contains(e.target)
   ) {
@@ -112,15 +113,23 @@ seacrhing.addEventListener("click",function(e){
 });
 
 
+
 //================================Two options==================================
 let tabs = document.querySelectorAll(".tab-optian");
+let sections = document.querySelectorAll(".tab-section");
+
+console.log(sections.length);
 
 window.addEventListener("DOMContentLoaded", () => {
   let savedTab = sessionStorage.getItem("activeTab");
-  if (savedTab !== null) {
+  if (savedTab !== null && tabs[savedTab]) {
     let current = document.querySelector(".two-optians-active");
     if (current) current.classList.remove("two-optians-active");
     tabs[savedTab].classList.add("two-optians-active");
+    /**** */
+    showSection(savedTab);
+  } else {
+    showSection(0);
   }
 });
 
@@ -139,5 +148,17 @@ tabs.forEach((tab, index) => {
     }
     tab.classList.add("two-optians-active");
     sessionStorage.setItem("activeTab", index);
+    showSection(index);
   });
 });
+
+
+function showSection(index) {
+  sections.forEach(section => {
+    section.classList.remove("active-section");
+  });
+
+  if (sections[index]) {
+    sections[index].classList.add("active-section");
+  }
+}
