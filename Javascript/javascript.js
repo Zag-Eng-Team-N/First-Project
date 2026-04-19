@@ -1,93 +1,6 @@
-//========================================================
-let myBtnLove=document.querySelector(".btn-love");
-let  intraciLove=document.getElementById("loveicon");
-let myspani=document.getElementById("spanlove");
-  
- let like=false;
-    
- myBtnLove.addEventListener("click",function(e){
-    if(!like){
-     
-    myspani.innerHTML++;
-  intraciLove.classList.remove("fa-regular");
-   intraciLove.classList.add("fa-solid");
-    intraciLove.style.color = "red";
-    like=true;
-    }
-    else{
-      
-     myspani.innerHTML--;
-   intraciLove.classList.remove("fa-solid");
-   intraciLove.classList.add("fa-regular");
-    intraciLove.style.color = "";
-      like= false; 
-    }
- });
 
 //========================================================
-let myspanview=document.getElementById("spanview");
- document.addEventListener("DOMContentLoaded",function(e){
-  let views=localStorage.getItem("views");
-  if(views==null){
-    views=0;
-  }
-  views++;
-  localStorage.setItem("views",views);
-  myspanview.innerHTML=views;
- });
-
-
-//========================================================
-let myBtnsave = document.getElementById("icon6");
-let mysavei=document.getElementById("saveicon");
-  
- let save=false;
-    
-myBtnsave.addEventListener("click",function(e){
-    if(!save){
-     
-  
-  mysavei.classList.remove("fa-regular");
-   mysavei.classList.add("fa-solid");
-    mysavei.style.color = "blue";
-    save=true;
-    }
-    else{
-      
- 
-   mysavei.classList.remove("fa-solid");
-   mysavei.classList.add("fa-regular");
-    mysavei.style.color = "";
-    save= false; 
-    }
- });
-
- //========================================================
- let btnshare=document.getElementById("icon7");
-  btnshare.addEventListener("click",function(e){
-  let mymenu=document.createElement("div");
-  mymenu.className="men";
-   let options = [
-    "Copy link",
-    "Share post",
-    "send via",
-  
-  ];
-    for(let i=0;i<options.length;i++){
-   let item=document.createElement("div");
-    item.textContent = options[i];  
-     item.className = "share-item";
-   mymenu.appendChild(item);
-    }
-     btnshare.appendChild(mymenu);
-  });
-  btnshare.addEventListener("click",()=>{
-    mymenu.classList.toggle();
-  });
-
-
-//========================================================
-let btnmore = document.getElementById("post-more");
+/*let btnmore = document.getElementById("post-more");
 
 btnmore.addEventListener("click",function(e){
   let mymenu2 = document.createElement("section");
@@ -113,7 +26,7 @@ btnmore.addEventListener("click",function(e){
 
   btnmore.appendChild(mymenu2);
 
-});
+}); */
 
 //================================================
 let closeBtn = document.querySelector(".close-btn");
@@ -167,7 +80,7 @@ document.addEventListener("click", function(e) {
   let menu = document.querySelector(".menu_for_all");
 
   if (!menu) return;
-
+//!btnmore.contains(e.target) &&
   if (
     !menu.contains(e.target) &&
     !btnmore.contains(e.target) &&
@@ -200,4 +113,52 @@ seacrhing.addEventListener("click",function(e){
 });
 
 
- 
+
+//================================Two options==================================
+let tabs = document.querySelectorAll(".tab-optian");
+let sections = document.querySelectorAll(".tab-section");
+
+console.log(sections.length);
+
+window.addEventListener("DOMContentLoaded", () => {
+  let savedTab = sessionStorage.getItem("activeTab");
+  if (savedTab !== null && tabs[savedTab]) {
+    let current = document.querySelector(".two-optians-active");
+    if (current) current.classList.remove("two-optians-active");
+    tabs[savedTab].classList.add("two-optians-active");
+    /**** */
+    showSection(savedTab);
+  } else {
+    showSection(0);
+  }
+});
+
+/*tabs.forEach(tab => {
+  tab.addEventListener("click", () => {
+    document.querySelector(".two-optians-active").classList.remove("two-optians-active");
+    tab.classList.add("two-optians-active");
+  });
+});*/
+
+tabs.forEach((tab, index) => {
+  tab.addEventListener("click", () => {
+    let current = document.querySelector(".two-optians-active");
+    if (current) {
+      current.classList.remove("two-optians-active");
+    }
+    tab.classList.add("two-optians-active");
+    sessionStorage.setItem("activeTab", index);
+    showSection(index);
+  });
+});
+
+
+function showSection(index) {
+  sections.forEach(section => {
+    section.classList.remove("active-section");
+  });
+
+  if (sections[index]) {
+    sections[index].classList.add("active-section");
+  }
+}
