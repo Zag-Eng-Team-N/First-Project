@@ -21,15 +21,14 @@ body {
   color: var(--primary-color);
   margin: 0;
   display: grid;
-  grid-template-columns: 170px 580px 450px;
-  justify-content: center;
-  height: 100vh;
+  grid-template-columns: 2fr 6fr 5fr;
   overflow-y: auto;   /* Scroll */
 }
 
 header {
   border-right: 1px solid var(--border-color);
   overflow-y: auto;
+  min-width: 80px;
   /*padding: 20px;*/
 }
 
@@ -251,8 +250,8 @@ aside {
 
 .trending-label span:hover {
   border-radius: 50%;
-  padding: 5px 10px;
-  background-color:  #3299E5;
+  /*padding: 5px 10px;*/
+  background-color:  var(--accent-hover-color);
   color: var(--accent-color);
 }
 
@@ -553,30 +552,223 @@ button{
 .two-optians {
   display: flex;
   border: 1px solid var(--accent-hover-color);
+  border-top: none;
 }
 
-.two-optians p {
-  padding-top: 15px;
-  padding-bottom: 15px;
+.tab-optian {
+  padding-top: 3px;
+  padding-bottom: 3px;
   margin: 0px;
   flex-grow: 1;
   text-align: center;
   font-size: var(--font-normal);
   font-weight:600;
   color: var(--text-secondary-color);
+  position: relative;
+  cursor: pointer;
 }
 
-.two-optians p:hover {
+.tab-optian:hover {
   background-color: var(--border-color);
 }
 
-/*.two-optians-active {
+.two-optians-active {
+/*  padding-top: 3px;
+  padding-bottom: 3px;
+  margin: 0px;
+  flex-grow: 1;
+  text-align: center;
+  font-size: var(--font-normal);
+  position: relative;
+  cursor: pointer;*/
   color: var(--primary-color);
+  font-weight: bold;
+} 
+
+.two-optians-active::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50px;
+  height: 3px;
+  background-color: #1d9bf0;
+  border-radius: 2px;
+}
+.two-optians-line {
+  border: none;
+  height: 1px;              
+  background-color: var(--accent-color);  
 }
 
-.two-optians-line {
-  position: absolute;
-  bottom: -2;
-  color: var(--accent-color);
-  border: 1px solid var(--accent-hover-color);
-} */
+
+.header-for-mobiles {
+  display: none;
+}
+
+.profile-photo{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.logo-photo {
+  width: 20px;
+  height: 20px; 
+}
+
+.btn-subscribe-mobile {
+  font-size: var(--font-normal);
+  font-weight: bold;
+  border-radius: 40px;
+  border: 1px solid var(--border-color);
+  background-color: var(--white-color);
+  padding: 8px 15px;
+}
+
+.page-label {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+
+.p-page-label {
+  font-size: var(--font-large);
+  font-weight: bold;
+}
+
+.main-label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 15px;
+}
+
+.no-notifications {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 20px 120px;
+}
+
+.big-no-noti {
+  font-size: xx-large;
+  font-weight: bolder;
+  margin-bottom: 0px;
+}
+
+.p-suggested {
+  font-size: var(--font-large);
+  font-weight: bold;
+  padding-left: 20px;
+}
+
+.single-suggestion {
+  padding: 0px 20px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  transition: 0.3s;
+  align-items: center;
+}
+
+.single-suggestion:hover {
+  background-color: var(--border-color);
+}
+
+.user-bio {
+  font-size: var(--font-normal);
+}
+
+.Suggested-name {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.Suggested-name p {
+  padding: 0px;
+  margin: 0px;
+}
+
+.single-suggestion img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+
+
+.user-information {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.single-suggestion button {
+  background-color: var(--primary-color);
+  color: var(--white-color);
+  font-size: var(--font-normal);
+  font-weight: bold;
+  border-style: none;
+  border-radius: 16px;
+  padding: 4px 10px;
+  transition: 0.3s;
+  height: 32px;
+}
+
+.single-suggestion button:hover {
+  opacity: 80%;
+}
+
+.no-noti {
+  font-size: var(--font-normal);
+  color: var(--text-secondary-color);
+  font-weight: 400;
+  margin: 0px;
+}
+
+.trending-search-page {
+  border-top: 1px solid var(--border-color);
+}
+
+.trending-search-page .trending {
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  aside { display: none; }
+  body { grid-template-columns: 1fr 5fr 1fr;}
+} 
+
+@media (max-width: 900px) {
+  aside { display: none;}
+  body { grid-template-columns: 1fr 10fr; }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  aside { display: none;}
+  header { display: none;}
+  body { display: flex; flex-direction: column;}
+  .header-for-mobiles {
+    display: block;  
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 5px 20px;
+  }
+  
+}
+
+
+ 
+
+
+
+
